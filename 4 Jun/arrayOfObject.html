@@ -1,0 +1,44 @@
+<script>
+	var students=[
+		{name:'Nadeem',roll:8},
+		{name:'Rahul',roll:3},
+		{name:'Shashank',roll:5},
+		{name:'abhishek',roll:1},
+		{name:'Piyush',roll:2},
+		{name:'Rahul',roll:3},
+	]
+	/*
+	students.forEach(function(student){
+		console.log(student.name + ' - ' +student.roll);
+	});
+	
+	var filteredStudents=students.filter(function(element){
+		return element.roll>=3;
+	});
+	
+	filteredStudents.forEach(function(student){
+		console.log(student.name + ' - ' +student.roll);
+	});
+	*/
+	/*
+	var mappedStudents=students.map(function(element,index){
+		//delete element.roll
+		//element.roll=index+1;
+		element.balance=0;
+		return element;
+	});
+	mappedStudents.forEach(function(element){
+		console.log(element);
+	});
+	*/
+	
+	students.sort(function(o1,o2){
+		if(o1.name.toLowerCase()>o2.name.toLowerCase())return 1;
+		else if(o1.name.toLowerCase()<o2.name.toLowerCase())return -1;
+		else return 0;
+	});
+	
+	students.forEach(function(student){
+		console.log(student.name + ' - ' +student.roll);
+	});
+</script>

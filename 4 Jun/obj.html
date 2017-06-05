@@ -1,0 +1,28 @@
+<script>
+	var obj={
+		a1:'hello',
+		'1a':'bye',
+		'3':'ddsd',
+		address:{
+			city:'Lucknow',
+			pincode:122001
+		}
+	}
+	
+	
+	console.log(obj.a1);
+	
+	console.log(obj['a1']);
+	console.log(obj['1a']);
+	console.log(obj['3']);
+	
+	obj.xyz=function(){
+	
+	}
+	obj.pqr=[1,2,3,4,5];
+	obj.a1=78;
+	delete obj['3'];
+	console.log(obj.address);
+	console.log(obj.address.city);
+	
+</script>

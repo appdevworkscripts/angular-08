@@ -1,0 +1,287 @@
+4
+4
+5+5
+10
+console.log(50)
+VM152:1 50
+undefined
+5>2
+true
+'hello'+'bye'
+"hellobye"
+2>5 && 5<6
+false
+2<5 && 5<6
+true
+5 && 7
+7
+null && 8
+null
+'' && 100
+""
+100 && 700
+700
+null || 100
+100
+null? 9:6;
+6
+5? 9:6;
+9
+if(console.log('hello'){
+VM254:1 Uncaught SyntaxError: Unexpected token {
+if(console.log('hello')){
+    console.log('1');
+}else{
+    console.log('2');
+}
+VM316:1 hello
+VM316:4 2
+undefined
+x=46+4
+50
+x
+50
+x
+50
+a=(b=1)+(c=1)
+2
+a
+2
+b
+1
+c
+1
+a=b=1+c=1
+VM354:1 Uncaught ReferenceError: Invalid left-hand side in assignment
+function sum1(a,b){
+    return a+b;
+}
+undefined
+x=10
+10
+sum2=function(a,b){
+    return a+b;
+}
+function (a,b){
+    return a+b;
+}
+sum1(2,3)
+5
+sum2(2,3)
+5
+sum1
+function sum1(a,b){
+    return a+b;
+}
+sum2
+function (a,b){
+    return a+b;
+}
+sum1(2,3,4)
+5
+sum(2,3)
+VM541:1 Uncaught ReferenceError: sum is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM541:1
+sum1(2,3)
+5
+sum1(2)
+NaN
+sum1()
+NaN
+function sum1(a=0,b=0){
+    return a+b;
+}
+undefined
+sum1()
+0
+sum1(2)
+2
+sum1(3,4)
+7
+typeof false
+"boolean"
+typeof "ffd"
+"string"
+x=78
+78
+typeof x
+"number"
+z={}
+Object {}
+typeof z
+"object"
+function tsum(a,b){
+    return (typeof a == 'number' ? a+b:a);
+}
+undefined
+tsum(2,3)
+5
+tsum('hello','bye')
+"hello"
+tsum
+function tsum(a,b){
+    return (typeof a == 'number' ? a+b:a);
+}
+sum1
+function sum1(a=0,b=0){
+    return a+b;
+}
+sum1(9)
+9
+function test(q){
+    return q(0)+q(-1)+q(1);
+}
+undefined
+test(sum1)
+0
+Math.sin(0)
+0
+Math.sin(1)
+0.8414709848078965
+Math.sin(-1)
+-0.8414709848078965
+test(Math.sin)
+0
+Math.cos(0)
+1
+Math.cos(-1)
+0.5403023058681398
+Math.cos(1)
+0.5403023058681398
+test(Math.cos)
+2.0806046117362795
+test(console.log)
+VM879:2 0
+VM879:2 -1
+VM879:2 1
+NaN
+test(math.sum2)
+VM1072:1 Uncaught ReferenceError: math is not defined
+    at <anonymous>:1:6
+(anonymous) @ VM1072:1
+test(sum2)
+NaN
+sum2
+function (a,b){
+    return a+b;
+}
+sum1
+function sum1(a=0,b=0){
+    return a+b;
+}
+sum1(2)
+2
+function sayhello(){
+    console.log('Hello');
+}
+undefined
+setTimeout(sayhello,2000)
+65
+VM1180:2 Hello
+setInterval(sayhello,2000)
+68
+17VM1180:2 Hello
+
+
+
+
+
+function x(){
+	i=0
+    return function(){
+        console.log(i++);
+    }
+}
+undefined
+x()
+function (){
+        console.log(i++);
+    }
+q=x()
+function (){
+        console.log(i++);
+    }
+q()
+VM1597:4 0
+undefined
+q()
+VM1597:4 1
+undefined
+q()
+VM1597:4 2
+undefined
+q()
+VM1597:4 3
+undefined
+x()
+function (){
+        console.log(i++);
+    }
+q()
+VM1597:4 0
+undefined
+function x(){
+	var i=0
+    return function(){
+        console.log(i++);
+    }
+}
+undefined
+q=x()
+function (){
+        console.log(i++);
+    }
+q()
+VM1660:4 0
+undefined
+q()
+VM1660:4 1
+undefined
+q()
+VM1660:4 2
+undefined
+q()
+VM1660:4 3
+undefined
+x()
+function (){
+        console.log(i++);
+    }
+q()
+VM1660:4 4
+undefined
+q()
+VM1660:4 5
+undefined
+p=x()
+function (){
+        console.log(i++);
+    }
+q=x()
+function (){
+        console.log(i++);
+    }
+r=x()
+function (){
+        console.log(i++);
+    }
+q()
+VM1660:4 0
+undefined
+q()
+VM1660:4 1
+undefined
+q()
+VM1660:4 2
+undefined
+p()
+VM1660:4 0
+undefined
+p()
+VM1660:4 1
+undefined
+q()
+VM1660:4 3
+undefined
+r()

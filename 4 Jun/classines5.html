@@ -1,0 +1,27 @@
+<script>
+	var Car=function(model,price){
+		this.model=model;
+		this.price=price;
+		
+	}
+	Car.prototype.drive=function(){
+		console.log(this.model+' Car is driving')
+	}
+	Car.prototype.toString=function(){
+		return (this.model+' - '+this.price);
+	}
+	var c1=new Car('Maruti',10000);
+	var c2=new Car('Ford',90000);
+	c1.drive();
+	c2.drive();
+	
+	var FrontDriveCar=function(model,price){
+		//Car.apply(this,[model,price]);
+		Car.call(this,model,price);
+		this.wheels=4;
+	};
+	
+	var fdc1=new FrontDriveCar('Maruti',50000);
+	console.log(fdc1);
+	
+</script>
