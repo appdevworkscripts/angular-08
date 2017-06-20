@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<style>
+		#studentTable, #studentTable tr, #studentTable td{
+			border: 1px solid;
+			border-collapse:collapse;
+		}
+		</style>
+	</head>
+	<body>
+		
+		<div ng-controller="ACtrl">
+			{{x}} - {{y}}
+			<table>
+				<tbody>
+					<tr ng-repeat="el in arr">
+						<td>{{el}} - {{$index}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="studentTable">
+				<thead>
+					<tr>
+						<td>Sr. No.</td>
+						<td>Name</td>
+						<td>Roll No</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="el in students">
+						<td>{{$index+1}}</td>
+						<td>{{el.name}}</td>
+						<td>{{el.roll}}</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+		<div ng-controller="BCtrl">
+			{{x}} - {{y}}
+			
+			<form ng-submit="a()">
+				Name <input required ng-model="student.name" >{{name}}<br />
+				Roll <input type="number" ng-model="student.roll" >
+				<button ng-click="b()">Submit</button>
+			</form>
+		</div>
+		
+		
+		<script src="angular.min.js"></script>
+		<script>
+								 // App name, list of dependency modules
+			var app=angular.module('myapp',[]);
+			app.run(function($rootScope){
+				console.log('App started');
+				$rootScope.x=100
+			});
+			
+			app.controller('ACtrl',function($scope){
+				$scope.y=5;
+				$scope.arr=[3,6,1,2];
+				
+				$scope.students=[
+					{name:'Abc',roll:3},
+					{name:'efg',roll:8},
+					{name:'pqr',roll:2},
+					{name:'rst',roll:1},
+					{name:'Xyz',roll:6},
+					{name:'mno',roll:5}
+				]
+			});
+			app.controller('BCtrl',function($scope){
+				$scope.y=10;
+				$scope.a=function(){
+					console.log('Form submitted');
+					console.log($scope.student);
+				};
+				$scope.b=function(){
+					console.log('Button clicked');
+					
+				};
+			});
+		</script>
+	</body>
+</html>
