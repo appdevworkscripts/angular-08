@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+	</head>
+	<body>
+		<div ng-controller="ACtrl" ng-init="x=100">
+		
+			<input ng-model="t" type="number">
+			<h1 ng-bind="t"></h1>
+			<div ng-if="t>100">
+				IF BLOCK
+			</div>
+			<div ng-show="t>100">
+				Show BLOCK
+			</div>
+			<div ng-hide="t>100">
+				Hide BLOCK
+			</div>
+		</div>
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
