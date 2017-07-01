@@ -1,14 +1,17 @@
 var app=angular.module('myapp',[]);
-
+app.constant('api_prefix','https://zenways-contact.herokuapp.com/api/');
+app.value('sum',function(a,b){
+	return a+b;
+});
 app.run(function(){
 	
 });
 
-app.controller('ACtrl',function($scope,$q,$http){
-	
+app.controller('ACtrl',function($scope,$q,$http,api_prefix,sum){
+	console.log(sum(5,6));
 	$scope.init=function(){
 		$http({
-			url:'https://zenways-contact.herokuapp.com/api/contacts',
+			url:api_prefix+'contacts',
 			headers:{
 				key:'ABCD'
 			}
@@ -23,7 +26,7 @@ app.controller('ACtrl',function($scope,$q,$http){
 	
 	$scope.submitContact=function(){
 		$http({
-			url:'https://zenways-contact.herokuapp.com/api/contact',
+			url:api_prefix+'contact',
 			method:'POST',
 			headers:{
 				key:'ABCD'
